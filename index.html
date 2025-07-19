@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Murder at Moonlight Mansion - Final Report</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #0d0d0d;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 2rem;
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    }
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1rem;
+      width: 300px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 1rem;
+      font-size: 1rem;
+      background-color: #d6336c;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #answer {
+      display: none;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: #1f1f1f;
+      border-left: 5px solid #d6336c;
+      max-width: 600px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>Detective Jenkins' Final Question</h1>
+  <p>Who do you believe murdered Evelyn Harper? <br><em>(Enter full name to unlock case report)</em></p>
+
+  <input type="text" id="guess" placeholder="Full Name (e.g., Clara Jane Summers)" />
+  <button onclick="checkAnswer()">Submit</button>
+
+  <div id="answer">
+    <h2>✅ Case Closed</h2>
+    <p><strong>Clara Jane Summers</strong> murdered Evelyn Harper out of jealousy and desperation. She manipulated the scene and attempted to divert suspicion onto others. But the combination of her fingerprints on the broken perfume bottle, an overheard argument, and an incriminating message confirmed her guilt.</p>
+    <p>Well done, Detective. You’ve helped bring justice to Moonlight Mansion.</p>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("guess").value.trim().toLowerCase();
+      const correct = "clara jane summers";
+      if (input === correct) {
+        document.getElementById("answer").style.display = "block";
+      } else {
+        alert("Incorrect. Review the evidence and try again.");
+      }
+    }
+  </script>
+</body>
+</html>
