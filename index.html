@@ -83,12 +83,9 @@
         heading.textContent = "✅ Case Closed";
         text.innerHTML = "<strong>Clara Jane Summers</strong> murdered Evelyn Harper out of jealousy and desperation. She manipulated the scene and attempted to divert suspicion onto others. But the combination of her fingerprints on the broken perfume bottle, an overheard argument, and an incriminating message confirmed her guilt.";
       } else {
-        answerBox.classList.add("incorrect");
         heading.textContent = "❌ Incorrect – But Here's the Truth";
-        text.innerHTML = "<strong>Clara Jane Summers</strong> was the true killer. Despite attempts to cover her tracks, the evidence was undeniable: fingerprints, witness accounts, and motive. Review the case and see where the clues pointed.";
-      }
-
-      answerBox.style.display = "block";
+    text.innerHTML = "<strong>Clara Jane Summers</strong> was the true killer. Despite attempts to cover her tracks, the evidence was undeniable: fingerprints, witness accounts, and motive. Review the case and see where the clues pointed.";
+    answerBox.style.display = "block"; // Show the answer box on incorrect
     }
   </script>
 </body>
